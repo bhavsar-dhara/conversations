@@ -8,11 +8,43 @@ import HomeScreen from './HomeScreen';
 
 import AboutPage from "./page/About.js";
 
+import firebase from 'react-native-firebase';
 
 const youtubeApiKey = process.env.YOUTUBE_API_KEY;
 console.disableYellowBox = true;
 
 class Player extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      userCreds: {},
+      uid: "",
+    };
+  }
+
+  componentDidMount() {
+
+    firebase.auth()
+      .signInAnonymouslyAndRetrieveData()
+      .then(credential => {
+        if (credential) {
+          console.log('default app user ->', credential.user.toJSON());
+
+          this.setState({
+            userCreds: credential.user,
+            uid: credential.user.uid,
+          });
+
+          // TODO -> save user creds in SharedPrefs -> to upload files in uid folder
+
+          console.log("uid === " + this.state.uid);
+          console.log("uid === " + this.state.userCreds.toJSON());
+        }
+      });
+
+  }
+
   render() {
     const navigation = this.props.navigation;
     return (
