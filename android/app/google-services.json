@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "349219334674",
+    "firebase_url": "https://idoc-conversations.firebaseio.com",
+    "project_id": "idoc-conversations",
+    "storage_bucket": "idoc-conversations.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349219334674:android:54b7c2c900218522",
+        "android_client_info": {
+          "package_name": "com.conversations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349219334674-veu3s7ue7mlfjegeaifn0isor6rg0iak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsUTsPdVvhPjALP_QXDftHOEx-zWBqb5A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
